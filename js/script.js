@@ -42,10 +42,15 @@ function listLegends(data) {
 
 function viewDetail(data) {
   let result = `
-        <img src="${data.thumbnail.medium}" alt="${data.nickname}">
-        <div class="legend__data">
-            <div class="data__nickname">${data.nickname}</div>
-        </div>
+    <div class="legend__data">
+        <div class="data__nickname">Name: ${data.nickname}</div>
+        <div class="data__age">Age: ${data.age}</div>
+        <div class="data__home">Home: ${data.home}</div>
+        <div class="data__type">Type: ${data.type}</div>
+        <div class="data__description">Description: ${data.desc}</div>
+    </div>
+    <img src="${data.thumbnail.medium}" alt="${data.nickname}">
+       
   `;
 
   legend.innerHTML = result;
