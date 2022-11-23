@@ -55,6 +55,8 @@ img {
   right: 0;
   width: 100%;
   overflow-x: scroll;
+  opacity: 0;
+  translate: 0 -200px;
 }
 #legends {
   display: flex;
@@ -111,8 +113,12 @@ img {
 }
 #legend img {
   max-height: 70vh;
+  opacity: 0;
+  translate: 0 -200px;
 }
 .legend__data {
+  opacity: 0;
+  translate: 0 -200px;
   border: 2px solid rgba(191, 186, 190, 0.6);
   backdrop-filter: blur(10px);
   position: absolute;
@@ -122,6 +128,7 @@ img {
   font-size: 15px;
   max-height: 100px;
   overflow-y: auto;
+  z-index: 2;
 }
 .legend__data .data__nickname {
   font-size: 20px;

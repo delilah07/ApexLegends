@@ -17,6 +17,11 @@ async function getLegends() {
     }
     listLegends(data);
     viewDetail(data[0]);
+    // GSAP Animation
+    const tl = gsap.timeline();
+    tl.to(".legend__nav", { y: 0, duration: 0.6, opacity: 1 });
+    tl.to("#legend", { y: 0, duration: 0.6, opacity: 1, stagger: 0.2 });
+    tl.to(".legend__data", { y: 0, duration: 0.6, opacity: 1, stagger: 0.4 });
   } catch (error) {
     console.log(error);
     loaderFrame.innerHTML = "Error";
@@ -54,6 +59,12 @@ function viewDetail(data) {
   `;
 
   legend.innerHTML = result;
+
+  // GSAP Animation
+  const tl = gsap.timeline();
+  tl.to(".legend__nav", { y: 0, duration: 0.6, opacity: 1 });
+  tl.to("#legend img", { y: 0, duration: 0.6, opacity: 1, stagger: 0.2 });
+  tl.to(".legend__data", { y: 0, duration: 0.6, opacity: 1, stagger: 0.4 });
 }
 
 getLegends();
