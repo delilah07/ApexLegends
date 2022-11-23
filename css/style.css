@@ -123,7 +123,7 @@ img {
   backdrop-filter: blur(10px);
   position: absolute;
   left: 0;
-  bottom: 90px;
+  bottom: 30px;
   padding: 10px;
   font-size: 15px;
   max-height: 100px;
@@ -171,6 +171,7 @@ img {
   .legend__data {
     font-size: 30px;
     max-height: 300px;
+    bottom: 90px;
   }
   #legend img {
     max-height: 80vh;
